@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Australian Digital Divide | Broadband Performance Analysis</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+		rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+	<section class="hero">
+		<div class="hero-content">
+			<div class="hero-university">Monash University</div>
+			<div class="hero-meta">Ekam Jyot Singh · 36196428</div>
+			<h1>The Australian Digital Divide</h1>
+			<p class="hero-subtitle">Understanding broadband performance across Australia's urban and regional
+				communities</p>
+			<div class="scroll-indicator">
+				<span>Scroll to explore</span>
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+				</svg>
+			</div>
+		</div>
+	</section>
+	<section class="section chapter" id="chapter-1">
+		<div class="section-header">
+			<span class="chapter-number">Chapter 1</span>
+			<h2 class="section-title">The Digital Divide</h2>
+			<div class="section-divider"></div>
+			<p class="section-caption">Australia's broadband performance varies dramatically by location. Urban centers
+				enjoy high-speed connectivity while vast regional and remote areas struggle with inadequate service.</p>
+		</div>
+		<div class="layout-full">
+			<div class="chart-card">
+				<div class="chart-title">Download Speed by Location</div>
+				<div class="chart-container" id="chart-1-map">
+					<div class="chart-placeholder">
+						<p>Loading map...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="map-caption">
+			<p>The data tells a clear story - where you live in Australia still determines how you live online. The
+				bright yellow and orange patches across our major cities show download speeds reaching 300,000+ kbps,
+				while vast swathes of regional Australia glow purple with speeds under 10,000 kbps. This isn't just
+				about streaming quality or download times. It's about remote work, online education, telehealth, and
+				economic opportunity.</p>
+		</div>
+		<div class="key-stats">
+			<div class="stat-box">
+				<div class="stat-icon">
+					<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+						<path d="M13 17l5-5-5-5M6 17l5-5-5-5" />
+					</svg>
+				</div>
+				<span class="stat-number">7×</span>
+				<span class="stat-label">Speed difference between city and remote areas</span>
+			</div>
+			<div class="stat-box">
+				<div class="stat-icon">
+					<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+						<circle cx="12" cy="12" r="10" />
+						<path d="M12 6v6l4 2" />
+					</svg>
+				</div>
+				<span class="stat-number">89ms</span>
+				<span class="stat-label">Average latency in urban centres</span>
+			</div>
+			<div class="stat-box">
+				<div class="stat-icon">
+					<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+						<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+					</svg>
+				</div>
+				<span class="stat-number">27%</span>
+				<span class="stat-label">Of test areas below minimum speed</span>
+			</div>
+		</div>
+	</section>
+	<section class="section chapter" id="chapter-2">
+		<div class="section-header">
+			<span class="chapter-number">Chapter 2</span>
+			<h2 class="section-title">Provider Performance</h2>
+			<div class="section-divider"></div>
+			<p class="section-caption">How do Australia's major NBN providers compare in delivering speeds during peak
+				hours? The data shows significant variation between providers.</p>
+		</div>
+		<div class="layout-full">
+			<div class="chart-card">
+				<div class="chart-title">NBN Provider Download Speeds (Busy Hours)</div>
+				<div class="chart-container" id="chart-2-isp">
+					<div class="chart-placeholder">
+						<p>Loading ISP comparison...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="map-caption">
+			<p>During evening peak hours (7-11pm), most NBN providers deliver speeds close to or above their advertised
+				plan speeds. The dashed red line at 100% marks the advertised speed threshold. Providers like Dodo &
+				iPrimus, Optus, and TPG actually exceed expectations, delivering over 100% of plan speeds during busy
+				hours. However, Aussie Broadband and Telstra fall slightly below 100%, indicating some congestion during
+				peak times. Upload speeds generally lag behind download speeds by about 5-15 percentage points,
+				reflecting the asymmetric nature of NBN plans.</p>
+		</div>
+	</section>
+	<section class="section chapter" id="chapter-3">
+		<div class="section-header">
+			<span class="chapter-number">Chapter 3</span>
+			<h2 class="section-title">What You're Actually Getting</h2>
+			<div class="section-divider"></div>
+			<p class="section-caption">NBN offers various speed tiers, but actual performance doesn't always match
+				advertised speeds. Here's what users really experience across different plan levels.</p>
+		</div>
+		<div class="layout-full">
+			<div class="chart-card">
+				<div class="chart-title">Download Speeds by Plan Tier</div>
+				<div class="chart-container" id="chart-3-plans">
+					<div class="chart-placeholder">
+						<p>Loading plan comparison...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="map-caption">
+			<p>The gap between advertised and actual speeds tells a compelling story. Higher-tier plans like NBN 250 and
+				NBN 1000 deliver 86-72% of their advertised speeds respectively during busy hours, while basic NBN 12
+				achieves just 90% of its promise. This performance variance means regional customers on entry-level
+				plans experience the most significant shortfalls, often receiving less than 25% of what city users on
+				premium tiers enjoy.</p>
+		</div>
+	</section>
+	<section class="section chapter" id="chapter-4">
+		<div class="section-header">
+			<span class="chapter-number">Chapter 4</span>
+			<h2 class="section-title">Why It Matters Where You Live</h2>
+			<div class="section-divider"></div>
+			<p class="section-caption">The technology used to connect your home to the NBN significantly impacts
+				performance. Fiber-to-the-premises delivers the best results, while fiber-to-the-node faces more
+				constraints.</p>
+		</div>
+		<div class="layout-triple">
+			<div class="chart-card">
+				<div class="chart-title">Average Speeds by Technology Type</div>
+				<div class="chart-container" id="chart-4-tech">
+					<div class="chart-placeholder">
+						<p>Loading technology comparison...</p>
+					</div>
+				</div>
+			</div>
+			<div class="chart-card">
+				<div class="chart-title">Speed Performance Distribution</div>
+				<div class="chart-container" id="chart-4-tiers">
+					<div class="chart-placeholder">
+						<p>Loading performance tiers...</p>
+					</div>
+				</div>
+			</div>
+			<div class="chart-card">
+				<div class="chart-title">Latency Performance Distribution</div>
+				<div class="chart-container" id="chart-4-latency">
+					<div class="chart-placeholder">
+						<p>Loading latency data...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="map-caption">
+			<p><strong>By connection type:</strong> FTTP delivers 99.8% of advertised speeds while FTTN (copper) only
+				achieves 94.3%, a 5.5% gap that means 50-100 Mbps real-world difference.</p>
+			<p><strong>By speed quality:</strong> Most Australian areas receive adequate or high-speed service, but a
+				significant portion remain under-served with speeds below 25 Mbps.</p>
+			<p><strong>By latency quality:</strong> The majority of locations enjoy excellent or good ping times, though
+				some areas experience latency issues affecting gaming and video calls.</p>
+		</div>
+	</section>
+	<section class="section chapter" id="chapter-5">
+		<div class="section-header">
+			<span class="chapter-number">Chapter 5</span>
+			<h2 class="section-title">The Evening Slowdown</h2>
+			<div class="section-divider"></div>
+			<p class="section-caption">Network congestion increases significantly during evening busy hours (7pm-11pm).
+				See how different plan types are affected throughout the day.</p>
+		</div>
+		<div class="layout-full">
+			<div class="chart-card">
+				<div class="chart-title">Average Speeds by Hour of Day</div>
+				<div class="chart-controls" id="chapter5-controls">
+					<span class="control-label">Plan Tiers:</span>
+					<label class="checkbox-label"><input type="checkbox" value="NBN 25" checked> NBN 25</label>
+					<label class="checkbox-label"><input type="checkbox" value="NBN 50" checked> NBN 50</label>
+					<label class="checkbox-label"><input type="checkbox" value="NBN 100" checked> NBN 100</label>
+					<label class="checkbox-label"><input type="checkbox" value="NBN 250" checked> NBN 250</label>
+					<label class="checkbox-label"><input type="checkbox" value="NBN 1000" checked> NBN 1000</label>
+				</div>
+				<div class="chart-container" id="chart-5-time">
+					<div class="chart-placeholder">
+						<p>Loading time-of-day data...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="map-caption">
+			<p>The evening slowdown is real, and it's more pronounced for higher-tier plans. While NBN 25 maintains
+				roughly 95% of its advertised speed throughout the day, NBN 1000 users see their speeds drop from 82% in
+				the early morning to just 72% during peak evening hours (8-10pm). This congestion effect means premium
+				plan users often get less than half the speeds they pay for when everyone is online. The busiest period
+				is 8-9pm when streaming, gaming, and video calls converge, creating a perfect storm of network demand.
+			</p>
+		</div>
+	</section>
+	<section class="section chapter" id="chapter-7">
+		<div class="section-header">
+			<span class="chapter-number">Chapter 7</span>
+			<h2 class="section-title">Performance Insights</h2>
+			<div class="section-divider"></div>
+			<p class="section-caption">Diving deeper into the data reveals patterns across regions and the relationship
+				between different performance metrics.</p>
+		</div>
+		<div class="layout-double">
+			<div class="chart-card">
+				<div class="chart-title">Regional Speed Comparison</div>
+				<div class="chart-container" id="chart-7-regional">
+					<div class="chart-placeholder">
+						<p>Loading regional data...</p>
+					</div>
+				</div>
+			</div>
+			<div class="chart-card">
+				<div class="chart-title">Speed vs Latency Correlation</div>
+				<div class="chart-controls" id="chapter7-controls">
+					<span class="control-label">Filter by Tier:</span>
+					<label class="select-label">
+						<select id="chapter7-tier-filter">
+							<option value="all">All Tiers</option>
+							<option value="High Speed">High Speed</option>
+							<option value="Adequate">Adequate</option>
+							<option value="Under-served">Under-served</option>
+						</select>
+					</label>
+				</div>
+				<div class="chart-container" id="chart-7-scatter">
+					<div class="chart-placeholder">
+						<p>Loading correlation data...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="map-caption">
+			<p>Regional analysis reveals a clear urban-regional divide in broadband performance. Urban areas
+				consistently outperform regional and remote locations, with average speeds 3-5x higher. The scatter plot
+				shows an interesting inverse relationship between download speed and latency - faster connections tend
+				to have lower ping times, which is crucial for real-time applications like video calls and online
+				gaming.</p>
+		</div>
+	</section>
+	<section class="section chapter" id="chapter-8">
+		<div class="section-header">
+			<span class="chapter-number">Chapter 8</span>
+			<h2 class="section-title">Where Areas Fall on the Speed Spectrum</h2>
+			<div class="section-divider"></div>
+			<p class="section-caption">A look at how Australian areas are distributed across different speed categories,
+				revealing where most locations stand.</p>
+		</div>
+		<div class="layout-full">
+			<div class="chart-card">
+				<div class="chart-title">Distribution of Areas by Download Speed</div>
+				<div class="chart-container" id="chart-8-rankings">
+					<div class="chart-placeholder">
+						<p>Loading speed distribution...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="map-caption">
+			<p>The funnel reveals a clear pattern: most Australian areas fall into the middle to lower speed categories.
+				Only a small fraction achieve very fast speeds (200+ Mbps), while the majority cluster in the medium
+				(25-50 Mbps) and slow (10-25 Mbps) ranges. This distribution highlights that while urban centers enjoy
+				high-speed connectivity, the bulk of tested locations still operate at moderate or lower speeds.</p>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-content">
+			<h3>References</h3>
+			<ul class="references-list">
+				<li><a href="https://figshare.com/articles/dataset/Speedtest_Open_Data_-_Australia_2020-04-01_extract/13370504"
+						target="_blank" rel="noopener">Speedtest Open Data - Australia (Figshare)</a></li>
+				<li><a href="https://www.accc.gov.au/consumers/telecommunications-and-internet/broadband-performance-data"
+						target="_blank" rel="noopener">ACCC Broadband Performance Data</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
