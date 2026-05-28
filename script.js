@@ -359,6 +359,7 @@
 			},
 		};
 
+
 		try {
 			container.innerHTML = "";
 			await vegaEmbed("#chart-3-plans", spec, { actions: false });
